@@ -27,15 +27,14 @@ public class MainApp extends Application {
 
     @Override
     public void start(final Stage stage) throws Exception {
-        CommonOperations.houseKeepingOperations();
         System.setProperty("apple.laf.useScreenMenuBar", "true");
         System.setProperty(
                 "com.apple.mrj.application.apple.menu.about.name", "FameDen Inc.");
         SceneNavigator sceneNavigator = new SceneNavigator();
-        sceneNavigator.loadScreen("registration", "/fxml/loginregistration/LoginRegistrationSceneFXML.fxml");
-        
-        sceneNavigator.loadScreen("tncTextViewerScreen", "/fxml/richtextviewer/TnCTextViewerFXML.fxml");
-        sceneNavigator.loadScreen("aboutusTextViewerScreen", "/fxml/richtextviewer/AboutUsTextViewerFXML.fxml");
+        sceneNavigator.loadScreen("registration", "/com/fameden/fxml/loginregistration/LoginRegistrationSceneFXML.fxml");
+
+        sceneNavigator.loadScreen("tncTextViewerScreen", "/com/fameden/fxml/richtextviewer/TnCTextViewerFXML.fxml");
+        sceneNavigator.loadScreen("aboutusTextViewerScreen", "/com/fameden/fxml/richtextviewer/AboutUsTextViewerFXML.fxml");
         sceneNavigator.setScreen("registration");
 
         FlowPane root = new FlowPane();
@@ -68,9 +67,9 @@ public class MainApp extends Application {
 
         stage.getIcons().add(new Image("com/fameden/image/logo.jpg"));
         stage.show();
-    }
+        CommonOperations.houseKeepingOperations();
 
-    
+    }
 
     public static void main(String[] args) {
         launch();

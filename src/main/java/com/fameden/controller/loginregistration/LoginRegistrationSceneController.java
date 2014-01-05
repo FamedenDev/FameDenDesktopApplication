@@ -37,7 +37,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Dialogs;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.image.Image;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
@@ -291,7 +290,7 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
                                             CommonResponseAttributes response = (CommonResponseAttributes) service.processRequest(populateDTO());
                                             if (!CommonValidations.isStringEmpty(response.getRequestStatus()) && response.getRequestStatus().equals(CommonConstants.SUCCESS)) {
                                                 success(CommonConstants.SUCCESS, "Password Updated " + loginRegistrationBinding.getForgotPasswordEmailAddress());
-
+                                                returnToSignUp();
                                             } else {
                                                 error(CommonConstants.ERROR, response.getErrorMessage());
 
@@ -300,7 +299,7 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
                                         } catch (Exception ex) {
                                             ex.printStackTrace();
                                             genericError(CommonConstants.ERROR, CommonConstants.ERROR);
-                                            returnToSignUp();
+                                            
                                         }
                                         return null;
                                     }
@@ -349,7 +348,6 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("Terms And Conditions");
-        //stage.getIcons().add(new Image(GlobalConstants.stageIconImageLocation));
         stage.centerOnScreen();
         stage.setFocused(true);
         stage.setResizable(false);
@@ -366,7 +364,6 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
         stage.setScene(scene);
         stage.setResizable(false);
         stage.setTitle("About Us");
-        //stage.getIcons().add(new Image(GlobalConstants.stageIconImageLocation));
         stage.centerOnScreen();
         stage.setFocused(true);
         stage.show();
