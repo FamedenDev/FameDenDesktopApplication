@@ -15,7 +15,7 @@
   <children>
     <ImageView fitHeight="713.8125" fitWidth="1269.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
       <image>
-        <Image url="@../../com/fameden/image/loginregistration/FameDen1-BW+Gloom.jpg" />
+        <Image url="@../../image/loginregistration/FameDen1-BW+Gloom.jpg" />
       </image>
     </ImageView>
     <HBox layoutX="0.0" layoutY="0.0" prefHeight="74.0" prefWidth="1269.0">
@@ -24,7 +24,7 @@
           <children>
             <ImageView fitHeight="74.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
               <image>
-                <Image url="@../../com/fameden/image/logo.jpg" />
+                <Image url="@../../image/logo.jpg" />
               </image>
             </ImageView>
           </children>
@@ -40,7 +40,7 @@
                   <children>
                     <PasswordField fx:id="loginPasswordField" alignment="CENTER_LEFT" prefHeight="28.0" prefWidth="229.0" promptText="Password" style="-fx-font: 17px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10;-fx-prompt-text-fill:grey;">
                       <stylesheets>
-                        <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                        <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                       </stylesheets>
                     </PasswordField>
                   </children>
@@ -63,7 +63,7 @@
                   <children>
                     <TextField fx:id="loginEmailAddressTextField" alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="237.0" promptText="Email Address" style="-fx-font: 17px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10;-fx-prompt-text-fill:grey;">
                       <stylesheets>
-                        <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                        <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                       </stylesheets>
                     </TextField>
                   </children>
@@ -94,7 +94,7 @@
               <children>
                 <TextField fx:id="registrationFullNameField" prefHeight="50.0" prefWidth="290.0" promptText="Full Name" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </TextField>
               </children>
@@ -103,7 +103,7 @@
               <children>
                 <TextField fx:id="registrationEmailAddressField" prefHeight="50.0" prefWidth="290.0" promptText="Email Address" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </TextField>
               </children>
@@ -112,7 +112,7 @@
               <children>
                 <PasswordField fx:id="registratonPasswordField" prefHeight="50.0" prefWidth="290.0" promptText="Password" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </PasswordField>
               </children>
@@ -121,7 +121,7 @@
               <children>
                 <PasswordField fx:id="registrationRePasswordField" prefHeight="50.0" prefWidth="290.0" promptText="Re-Enter Password" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </PasswordField>
               </children>
@@ -184,7 +184,7 @@
               <children>
                 <TextField fx:id="forgotPasswordEmailAddressField" prefHeight="50.0" prefWidth="290.0" promptText="Email Address" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </TextField>
               </children>
@@ -230,7 +230,7 @@
               <children>
                 <TextField fx:id="forgotPasswordPassCodeField" prefHeight="50.0" prefWidth="290.0" promptText="Enter Secret Code" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </TextField>
               </children>
@@ -239,7 +239,7 @@
               <children>
                 <PasswordField fx:id="forgotPasswordPasswordField" prefHeight="50.0" prefWidth="290.0" promptText="Password" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </PasswordField>
               </children>
@@ -248,7 +248,7 @@
               <children>
                 <PasswordField fx:id="forgotPasswordRePasswordField" prefHeight="50.0" prefWidth="290.0" promptText="Re-Enter Password" style="-fx-font: 20px Tahoma;&#10;-fx-fill: linear-gradient(from 0% 0% to 100% 200%, repeat, aqua 0%, red 50%);&#10;-fx-stroke: black;&#10;-fx-stroke-width: 1;&#10; -fx-prompt-text-fill:grey;">
                   <stylesheets>
-                    <URL value="@../../css/loginregistration/loginregistrationscene.css" />
+                    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
                   </stylesheets>
                 </PasswordField>
               </children>
@@ -288,6 +288,6 @@
     </BorderPane>
   </children>
   <stylesheets>
-    <URL value="@../../styles/loginregistration/loginregistrationscene.css" />
+    <URL value="@../../../../styles/loginregistration/loginregistrationscene.css" />
   </stylesheets>
 </AnchorPane>

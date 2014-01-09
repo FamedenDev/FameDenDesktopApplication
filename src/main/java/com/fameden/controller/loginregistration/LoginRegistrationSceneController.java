@@ -18,6 +18,7 @@ import com.fameden.service.loginregistration.ForgotPasswordService;
 import com.fameden.service.loginregistration.LoginService;
 import com.fameden.service.loginregistration.RegistrationService;
 import com.fameden.service.loginregistration.UpdatePasswordService;
+import com.fameden.start.MainViewApp;
 import com.fameden.util.CommonValidations;
 import com.fameden.webservice.contracts.useroperations.CommonResponseAttributes;
 import com.fameden.webservice.contracts.useroperations.FameDenLoginResponse;
@@ -39,6 +40,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.Window;
 
 /**
  * FXML Controller class
@@ -82,6 +84,8 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
     private LoginRegistrationBinding loginRegistrationBinding = new LoginRegistrationBinding();
 
     private String requestType;
+
+    final Stage MainViewStage = new Stage();
 
     /**
      * Initializes the controller class.
@@ -135,12 +139,14 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
                         try {
                             FameDenLoginResponse response = (FameDenLoginResponse) service.processRequest(populateDTO());
                             if (!CommonValidations.isStringEmpty(response.getRequestStatus()) && response.getRequestStatus().equals(CommonConstants.SUCCESS)) {
-                                success(CommonConstants.SUCCESS, "Welcome " + response.getUserFullName() + " to FameDen");
+                                System.out.println("Calling successLogin");
+                                successLogin(CommonConstants.SUCCESS, "Welcome " + response.getUserFullName() + " to FameDen");
                             } else {
                                 error(CommonConstants.ERROR, response.getErrorMessage());
                             }
 
                         } catch (Exception ex) {
+                            ex.printStackTrace();
                             genericError(CommonConstants.ERROR, CommonConstants.ERROR);
                         }
                         return null;
@@ -193,6 +199,35 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
         } catch (Exception ex) {
             Logger.getLogger(LoginRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    public void successLogin(final String title, final String message) {
+        Platform.runLater(new Runnable() {
+            public void run() {
+                Dialogs.showInformationDialog(null, null, message, title);
+                System.out.println("Hi IN successLogin");
+                Platform.runLater(new Runnable() {
+                    public void run() {
+                        MainViewApp app = new MainViewApp();
+                        try {
+                            app.start(new Stage());
+                        } catch (Exception ex) {
+                            Logger.getLogger(LoginRegistrationSceneController.class.getName()).log(Level.SEVERE, null, ex);
+                        }
+                    }
+                });
+
+                Scene scene = loginEmailAddressTextField.getScene();
+                if (scene != null) {
+                    Window window = scene.getWindow();
+                    if (window != null) {
+                        window.hide();
+                    }
+                }
+
+            }
+        });
+
     }
 
     @Override
@@ -299,7 +334,7 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
                                         } catch (Exception ex) {
                                             ex.printStackTrace();
                                             genericError(CommonConstants.ERROR, CommonConstants.ERROR);
-                                            
+
                                         }
                                         return null;
                                     }
@@ -353,7 +388,7 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
         stage.setResizable(false);
         stage.show();
     }
-    
+
     @FXML
     public void viewAboutUs() {
         stage = new Stage();
