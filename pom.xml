@@ -119,7 +119,8 @@
                         </goals>
                         <configuration>
                             <wsdlUrls>
-                                <wsdlUrl>http://famedenbackendws.famedendev.cloudbees.net/FameDenRemoteService/HouseKeepingOperationsService?wsdl</wsdlUrl>
+                                <!--<wsdlUrl>http://famedenbackendws.famedendev.cloudbees.net/FameDenRemoteService/HouseKeepingOperationsService?wsdl</wsdlUrl>-->
+                                <wsdlUrl>http://localhost:8080/FameDenService/HouseKeepingOperationsService?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <xnocompile>false</xnocompile>
                         </configuration>
@@ -133,7 +134,8 @@
                         </goals>
                         <configuration>
                             <wsdlUrls>
-                                <wsdlUrl>http://famedenbackendws.famedendev.cloudbees.net/FameDenRemoteService/UserOperationsService?wsdl</wsdlUrl>
+                                <!--<wsdlUrl>http://famedenbackendws.famedendev.cloudbees.net/FameDenRemoteService/UserOperationsService?wsdl</wsdlUrl>-->
+                                <wsdlUrl>http://localhost:8080/FameDenService/UserOperationsService?wsdl</wsdlUrl>
                             </wsdlUrls>
                             <xnocompile>false</xnocompile>
                         </configuration>

@@ -21,7 +21,7 @@ import com.fameden.service.loginregistration.UpdatePasswordService;
 import com.fameden.start.MainViewApp;
 import com.fameden.util.CommonValidations;
 import com.fameden.webservice.contracts.useroperations.CommonResponseAttributes;
-import com.fameden.webservice.contracts.useroperations.FameDenLoginResponse;
+import com.fameden.webservice.contracts.useroperations.FameDenViewProfileResponse;
 import com.fameden.webservice.contracts.useroperations.FameDenRegistrationResponse;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -137,10 +137,10 @@ public class LoginRegistrationSceneController implements Initializable, IScreenC
                     @Override
                     public Void call() {
                         try {
-                            FameDenLoginResponse response = (FameDenLoginResponse) service.processRequest(populateDTO());
+                            FameDenViewProfileResponse response = (FameDenViewProfileResponse) service.processRequest(populateDTO());
                             if (!CommonValidations.isStringEmpty(response.getRequestStatus()) && response.getRequestStatus().equals(CommonConstants.SUCCESS)) {
                                 System.out.println("Calling successLogin");
-                                successLogin(CommonConstants.SUCCESS, "Welcome " + response.getUserFullName() + " to FameDen");
+                                successLogin(CommonConstants.SUCCESS, "Welcome " + response.getFullName() + " to FameDen");
                             } else {
                                 error(CommonConstants.ERROR, response.getErrorMessage());
                             }

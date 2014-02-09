@@ -10,8 +10,8 @@ import com.fameden.dto.loginregistration.LoginRegistrationDTO;
 import com.fameden.service.IService;
 import com.fameden.util.encrypt.RSAAlgorithmImpl;
 import com.fameden.webservice.contracts.useroperations.FameDenLoginRequest;
-import com.fameden.webservice.contracts.useroperations.FameDenLoginResponse;
 import com.fameden.webservice.useroperations.UserOperationsService;
+import com.fameden.webservice.contracts.useroperations.FameDenViewProfileResponse;
 import com.fameden.webservice.useroperations.UserOperationsService_Service;
 import java.security.NoSuchAlgorithmException;
 import java.util.logging.Level;
@@ -45,7 +45,7 @@ public class LoginService implements IService {
 
     @Override
     public Object processRequest(Object obj) {
-        FameDenLoginResponse response = null;
+        FameDenViewProfileResponse response = null;
         UserOperationsService_Service service = new UserOperationsService_Service();
         UserOperationsService servicePort = service.getUserOperationsPort();
         try {
