@@ -10,10 +10,20 @@
 
 <Pane layoutX="0.0" layoutY="-715.0" maxHeight="715.0" maxWidth="1275.0" minHeight="715.0" minWidth="1275.0" prefHeight="715.0" prefWidth="1275.0" style="-fx-border-color: black;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="com.fameden.controller.mainview.FameDenMainViewFXMLController">
   <children>
-    <ImageView fitHeight="2145.0" fitWidth="3825.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+    <ImageView fitHeight="2145.0" fitWidth="3825.0" layoutX="0.0" layoutY="0.0" pickOnBounds="true" preserveRatio="true">
       <image>
         <Image url="@../../image/mainview/MainViewBG.jpeg" />
       </image>
     </ImageView>
+    <AnchorPane id="AnchorPane" layoutX="1.0" layoutY="1.0" />
+    <Label layoutX="104.0" layoutY="140.0" text="Name" />
+    <Label layoutX="104.0" layoutY="168.0" text="Age" />
+    <Label layoutX="104.0" layoutY="196.0" text="Address" />
+    <Label layoutX="172.0" layoutY="168.0" text="24 yrs" />
+    <Label layoutX="170.0" layoutY="224.0" text="jb,h,jbjbhjhv" />
+    <Label layoutX="104.0" layoutY="224.0" text="Interest" />
+    <Label layoutX="172.0" layoutY="140.0" text="Ravjot Singh" />
+    <Label layoutX="172.0" layoutY="193.0" text="hgvj jh jbh jbjbhbkjbjkb bjkhb kbbbkkj bkb" />
+    <Button layoutX="190.0" layoutY="571.0" mnemonicParsing="false" text="Button" />
   </children>
 </Pane>
