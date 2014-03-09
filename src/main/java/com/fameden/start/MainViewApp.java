@@ -10,8 +10,10 @@ import javafx.application.Application;
 import static javafx.application.Application.launch;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -25,11 +27,18 @@ public class MainViewApp extends Application{
         FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource(fxml));
         Pane pane = (Pane) fxmlLoader.load();
         
-        Scene scene = new Scene(pane);
         
+       
+        Scene scene = new Scene(pane);
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.sizeToScene();
         stage.setScene(scene);
+        stage.setResizable(false);
+        stage.centerOnScreen();
         stage.setHeight(pane.getPrefHeight());
         stage.setWidth(pane.getPrefWidth());
+         stage.getIcons().add(new Image("com/fameden/image/logo.jpg"));
+       
         stage.show();
     }
     
